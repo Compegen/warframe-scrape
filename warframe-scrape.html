@@ -1,16 +1,21 @@
+<!DOCTYPE html>
 <html>
-<base href='https://warframe.fandom.com/wiki/'>
-<div id='article'></div>
-<script>
-fetch('https://warframe.fandom.com/api.php?origin=*&action=parse&page=Void_Relic/ByRewards/SimpleTable&prop=text&format=json', { mode: 'cors' })
-    .then(function(response) {
-        return response.json();
-    })
-    .then(function(json) {
-        document.getElementById('article').innerHTML = json.parse.text['*'];
-		var holdr = document.getElementById('article').getElementsByClassName('article-table')[0];
-		document.body.removeChild(document.getElementById('article'));
-		document.body.appendChild(holdr);
-    });
-</script>
+	<head>
+		<title>Scraper</title>
+	</head>
+	<body>
+		<div id='article'></div>
+	</body>
+	<script>
+		fetch('https://warframe.fandom.com/api.php?origin=*&action=parse&page=Void_Relic/ByRewards/SimpleTable&prop=text&format=json', { mode: 'cors' })
+		    .then(function(response) {
+			return response.json();
+		    })
+		    .then(function(json) {
+			document.getElementById('article').innerHTML = json.parse.text['*'];
+				var holdr = document.getElementById('article').getElementsByClassName('article-table')[0];
+				document.body.removeChild(document.getElementById('article'));
+				document.body.appendChild(holdr);
+		    });
+	</script>
 </html>
