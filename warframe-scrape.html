@@ -7,7 +7,7 @@
 		<div id='article'></div>
 	</body>
 	<script>
-		fetch('https://warframe.fandom.com//api.php?format=json&action=parse&disablelimitreport=true&prop=text&text=%7B%7B%23invoke%3aVoid%7CsimpleRewardTable%7D%7D', { mode: 'cors' })
+		fetch('https://warframe.fandom.com/api.php?origin=*&format=json&action=parse&disablelimitreport=true&prop=text&text={{%23invoke%3aVoid|simpleRewardTable}}', { mode: 'cors' })
 		    .then(function(response) {
 			return response.json();
 		    })
