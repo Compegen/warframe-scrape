@@ -7,17 +7,15 @@
 		<div id='article'></div>
 	</body>
 	<script>
-		fetch('https://warframe.fandom.com/api.php?origin=*&format=json&action=parse&disablelimitreport=true&prop=text&text={{%23invoke%3aVoid|simpleRewardTable}}', { mode: 'cors' })
+		fetch('https://warframe.fandom.com/api.php?origin=*&action=parse&page=Void_Relic/ByRewards/SimpleTable&prop=text&format=json', { mode: 'cors' })
 		    .then(function(response) {
 			return response.json();
 		    })
 		    .then(function(json) {
 			document.getElementById('article').innerHTML = json.parse.text['*'];
-/*
 				var holdr = document.getElementById('article').getElementsByClassName('article-table')[0];
 				document.body.removeChild(document.getElementById('article'));
 				document.body.appendChild(holdr);
-*/
 		    });
 	</script>
 </html>
