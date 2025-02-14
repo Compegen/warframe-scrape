@@ -7,7 +7,9 @@
 		<div id='article'></div>
 	</body>
 	<script>
-		fetch('https://warframe.fandom.com/api.php?origin=*&action=parse&page=Void_Relic/ByRewards/SimpleTable&prop=text&format=json', { mode: 'cors' })
+		//https://wiki.warframe.com/api.php?action=parse&page=Void_Relic/ByRewards/SimpleTable&prop=text&format=json
+		//https://warframe.fandom.com/api.php?origin=*&action=parse&page=Void_Relic/ByRewards/SimpleTable&prop=text&format=json
+		fetch('https://wiki.warframe.com/api.php?action=parse&page=Void_Relic/ByRewards/SimpleTable&prop=text&format=json', { mode: 'cors' })
 		    .then(function(response) {
 			return response.json();
 		    })
